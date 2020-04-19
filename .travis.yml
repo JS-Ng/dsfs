@@ -1,0 +1,18 @@
+language: java
+sudo: false
+jdk:
+  - openjdk11
+script:
+  - echo "Test start"
+  - mvn clean test
+  - |
+    if [ $? -ne 0 ];
+    then
+      echo "TODO: REPLACE IT WITH FAIL LOG TO SERVER";
+    else
+      echo "TODO: REPLACE IT WITH SUCCESS LOG TO SERVER";
+    fi
+  # should be travis merge build script
+cache:
+  directories:
+    - "$HOME/.m2"
